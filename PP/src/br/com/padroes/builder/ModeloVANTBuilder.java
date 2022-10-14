@@ -1,15 +1,15 @@
 package br.com.padroes.builder;
 
-public class FogueteModeloI extends FogueteBuilder {
+public class ModeloVANTBuilder extends FogueteBuilder {
 
     @Override
     public void buildModelo() {
-        foguete.setModelo("Falcon Heavy");
+        foguete.setModelo("Drone");
     }
 
     @Override
     public void buildTipoMotor() {
-        foguete.setTipoMotor("3x Merlin D1 (centrais e laterais)");
+        foguete.setTipoMotor("Motorzinho");
     }
 
     @Override
@@ -19,31 +19,31 @@ public class FogueteModeloI extends FogueteBuilder {
 
     @Override
     public void buildCapacidadeTanqueCombustivel() {
-        foguete.setCapacidadeTanqueCombustivel(2700000);
-    }
-
-    @Override
-    public void buildTotalAssentos() {
-        foguete.setTotalAssentos((short)30);
+        foguete.setCapacidadeTanqueCombustivel(300);
     }
 
     @Override
     public void buildVelocidadeMaxima() {
-        foguete.setVelocidadeMaxima(39600);
+        foguete.setVelocidadeMaxima(1000);
     }
 
     @Override
     public void buildPeso() {
-        foguete.setPeso(1420788);
+        foguete.setPeso(500);
     }
 
     @Override
     public void buildAltura() {
-        foguete.setAltura(70);
+        foguete.setAltura(5);
     }
 
     @Override
     public void buildFabricante() {
-        foguete.setFabricante("SpaceX");
+        foguete.setFabricante("IFSX");
+    }
+
+    @Override
+    public void buildTotalAssentos(){
+
     }
 }

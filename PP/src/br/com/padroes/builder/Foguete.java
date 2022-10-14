@@ -85,11 +85,19 @@ public class Foguete {
 
     @Override
     public String toString() {
-        return "Modelo: " + modelo + "\nMotor: " + tipoMotor +"\nCombustível: " + tipoCombustivel + "\nCapacidade do Tanque: " + capacidadeTanqueCombustivel +
-                " litros\nNúmero de assentos: " + totalAssentos +
-                "\nVelocidade maxima: " + velocidadeMaxima +
-                " km/h\nPeso: " + peso +
-                " kgs\nAltura: " + altura +
-                " metros\nFabricante: " + fabricante+"\n";
+        if (totalAssentos == 0) {
+            return "Modelo: " + modelo + "\nMotor: " + tipoMotor + "\nCombustível: " + tipoCombustivel + "\nCapacidade do Tanque: " + capacidadeTanqueCombustivel +
+                    " litros"+                    "\nVelocidade maxima: " + velocidadeMaxima +
+                    " km/h\nPeso: " + peso +
+                    " kgs\nAltura: " + altura +
+                    " metros\nFabricante: " + fabricante + "\n";
+        } else {
+            return "Modelo: " + modelo + "\nMotor: " + tipoMotor + "\nCombustível: " + tipoCombustivel + "\nCapacidade do Tanque: " + capacidadeTanqueCombustivel +
+                    " litros\nNúmero de assentos: " + totalAssentos +
+                    "\nVelocidade maxima: " + velocidadeMaxima +
+                    " km/h\nPeso: " + peso +
+                    " kgs\nAltura: " + altura +
+                    " metros\nFabricante: " + fabricante + "\n";
+        }
     }
 }

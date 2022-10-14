@@ -19,6 +19,17 @@ public class LinhaDeMontagem {
         foguete.buildVelocidadeMaxima();
     }
 
+    public void montarFogueteNaoTripulado(){
+        foguete.buildModelo();
+        foguete.buildAltura();
+        foguete.buildFabricante();
+        foguete.buildPeso();
+        foguete.buildTipoCombustivel();
+        foguete.buildCapacidadeTanqueCombustivel();
+        foguete.buildTipoMotor();
+        foguete.buildVelocidadeMaxima();
+    }
+
     public Foguete getFoguete(){
         return foguete.getFoguete();
     }

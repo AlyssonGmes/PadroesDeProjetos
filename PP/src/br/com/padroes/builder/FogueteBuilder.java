@@ -16,7 +16,6 @@ public abstract class FogueteBuilder extends Foguete {
     public abstract void buildVelocidadeMaxima();
     public abstract void buildPeso();
     public abstract void buildAltura();
-
     public abstract void buildFabricante();
 
     public Foguete getFoguete(){
