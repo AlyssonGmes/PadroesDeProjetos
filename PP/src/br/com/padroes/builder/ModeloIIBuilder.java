@@ -1,6 +1,6 @@
 package br.com.padroes.builder;
 
-public class FogueteModeloIIBuilder extends FogueteBuilder {
+public class ModeloIIBuilder extends FogueteBuilder {
 
     @Override
     public void buildModelo() {
