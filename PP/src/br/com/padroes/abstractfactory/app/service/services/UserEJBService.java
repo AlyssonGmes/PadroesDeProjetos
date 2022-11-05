@@ -1,6 +1,15 @@
 package br.com.padroes.abstractfactory.app.service.services;
 
+import javax.swing.*;
+
 public class UserEJBService implements UserService {
+
+	private UserEJBService(){
+
+	}
+	public static UserEJBService getInstance(){
+		return new UserEJBService();
+	}
 
 	@Override
 	public void save(String name) {

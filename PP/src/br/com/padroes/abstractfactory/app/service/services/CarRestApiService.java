@@ -2,6 +2,14 @@ package br.com.padroes.abstractfactory.app.service.services;
 
 public class CarRestApiService implements CarService {
 
+	private CarRestApiService(){
+
+	}
+
+	public static CarRestApiService getInstance(){
+		return new CarRestApiService();
+	}
+
 	@Override
 	public void save(String model) {
 		System.out.println("Saving " + model + " car through Rest's interface");

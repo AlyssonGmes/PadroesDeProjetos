@@ -1,18 +1,38 @@
 package br.com.padroes.abstractfactory.app.service.factory;
 
-public class ServiceFactory implements ServicesAbstractFactory {
-    ServicesAbstractFactory servico;
+public class ServiceFactory<T> implements ServicesAbstractFactory {
 
     public ServiceFactory() {
 
     }
 
-    public void createCarServiceFactory() {
-        servico = new CarServiceFactory();
+    @Override
+    public T create(String servico) {
+        if (servico.equalsIgnoreCase("User")) {
+            return (T) new UserServiceFactory<>();
+        } else if (servico.equalsIgnoreCase("Car")) {
+            return (T) new CarServiceFactory<>();
+        } else {
+            System.out.println("Serviço indisponível.");
+            return null;
+        }
     }
 
-    public void createUserServiceFactory() {
-        servico = new UserServiceFactory();
+    @Override
+    public void save(String model) {
+        System.out.println("Saving " + model + " service through ServicesAbstractFactory");
+    }
+
+    @Override
+    public void update(String newModel) {
+        System.out.println("Updating " + newModel + " service through ServicesAbstractFactory");
+
+    }
+
+    @Override
+    public boolean delete(Integer id) {
+        System.out.println("Removing User #" + id + " through ServicesAbstractFactory");
+        return true;
     }
 
 }

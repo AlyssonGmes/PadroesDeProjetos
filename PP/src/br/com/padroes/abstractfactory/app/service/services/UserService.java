@@ -1,6 +1,7 @@
 package br.com.padroes.abstractfactory.app.service.services;
 
-public interface UserService {
+
+public interface UserService  {
 	void save(String name);
 	boolean delete(Integer id);
 }
