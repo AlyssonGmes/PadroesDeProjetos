@@ -5,7 +5,7 @@ import br.com.padroes.abstractfactory.app.service.services.UserRestApiService;
 
 public class UserServiceFactory<T> implements ServicesAbstractFactory {
 
-    public UserServiceFactory() {
+    private UserServiceFactory() {
 
     }
 
@@ -21,6 +21,9 @@ public class UserServiceFactory<T> implements ServicesAbstractFactory {
         }
     }
 
+    public static UserServiceFactory getInstance(){
+        return new UserServiceFactory();
+    }
     @Override
     public void save(String model) {
         System.out.println("Saving " + model + " user through UserServiceFactory");

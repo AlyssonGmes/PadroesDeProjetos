@@ -1,6 +1,6 @@
 package br.com.padroes.abstractfactory.app.service.factory;
 
-public class ServiceFactory<T> implements ServicesAbstractFactory {
+public class  ServiceFactory <T> implements ServicesAbstractFactory {
 
     public ServiceFactory() {
 
@@ -9,9 +9,9 @@ public class ServiceFactory<T> implements ServicesAbstractFactory {
     @Override
     public T create(String servico) {
         if (servico.equalsIgnoreCase("User")) {
-            return (T) new UserServiceFactory<>();
+            return (T) UserServiceFactory.getInstance();
         } else if (servico.equalsIgnoreCase("Car")) {
-            return (T) new CarServiceFactory<>();
+            return (T) CarServiceFactory.getInstance();
         } else {
             System.out.println("Serviço indisponível.");
             return null;

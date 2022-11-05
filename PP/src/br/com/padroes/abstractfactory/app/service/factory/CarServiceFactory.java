@@ -5,7 +5,7 @@ import br.com.padroes.abstractfactory.app.service.services.CarRestApiService;
 
 public class CarServiceFactory <T> implements ServicesAbstractFactory {
 
-    public CarServiceFactory() {
+    private CarServiceFactory() {
 
     }
 
@@ -19,6 +19,10 @@ public class CarServiceFactory <T> implements ServicesAbstractFactory {
             System.out.println("Serviço indisponível.");
             return null;
         }
+    }
+
+    public static CarServiceFactory getInstance(){
+        return new CarServiceFactory();
     }
     @Override
     public void save(String model) {
